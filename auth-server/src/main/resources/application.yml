@@ -1,0 +1,23 @@
+server:
+    port : 8080
+    context-path : /auth-server
+    
+security:
+  oauth2:
+    client:
+        
+      preEstablishedRedirectUri : http://localhost:8081/client-one/callback
+      useCurrentUri : false
+        
+      clientId: 448180532687-gjcho6s761ss2uaahps637k4vbubdk3o.apps.googleusercontent.com
+      clientSecret: ehWURF-H0xeQS2xmBgiv98lH
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
